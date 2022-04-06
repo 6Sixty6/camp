@@ -34,7 +34,7 @@ void *multithreading(void *vargp) {
         herror(hostname);
         exit(2);
     }
-    printf("starting port scan...: \n");
+    printf("starting port scan... \n");
     for (i = start; i <= end; i++) {
         sa.sin_port = htons(i);
         sock = socket(AF_INET, SOCK_STREAM, 0);
