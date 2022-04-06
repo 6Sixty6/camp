@@ -11,9 +11,9 @@ SixSixtySix anusO1
 #include <arpa/inet.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <pthread.h>
 
-int main(int argc, char ** argv) {
-    printf("SixSixtySix anusO1\n");
+void *multithreading(void *vargp) {
     struct hostent * host;
     int err, i, sock, start, end;
     char hostname[666];
@@ -52,5 +52,13 @@ int main(int argc, char ** argv) {
     }
     printf("\r");
     fflush(stdout);
+}
+
+int main(int argc, char ** argv) {
+    printf("SixSixtySix anusO1\n");
+    pthread_t thread_id;
+    pthread_create(&thread_id, NULL, multithreading, NULL);
+    pthread_join(thread_id, NULL);
+    exit(0);
     return 0;
 }
