@@ -52,9 +52,10 @@ void *multithreading(void *vargp) {
     }
     printf("\r");
     fflush(stdout);
+    return NULL;
 }
 
-int main(int argc, char ** argv) {
+int main(int argc, char **argv) {
     printf("SixSixtySix anusO1\n");
     pthread_t thread_id;
     pthread_create(&thread_id, NULL, multithreading, NULL);
