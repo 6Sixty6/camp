@@ -59,6 +59,5 @@ int main(int argc, char ** argv) {
     pthread_t thread_id;
     pthread_create(&thread_id, NULL, multithreading, NULL);
     pthread_join(thread_id, NULL);
-    exit(0);
     return 0;
 }
