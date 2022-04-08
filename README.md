@@ -1,4 +1,4 @@
 # CAMP - port scanner
-# CURRENTLY NOT WORKING
+# CURRENTLY SHITTY
 C port scanner<br>
 competitor to https://github.com/6Sixty6/ramp
